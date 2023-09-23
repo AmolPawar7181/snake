@@ -284,7 +284,6 @@ const Home = () => {
 							: 'paused'
 					} bg-white rounded-lg overflow-hidden shadow-md`}
 				>
-					{direction}
 					<div
 						className='board grid grid-cols-20 grid-rows-20 w-400 h-400 mx-auto border-2 border-gray-300'
 						data-testid='board'

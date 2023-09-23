@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:8080';
+const API_URL = 'https://snake-no5a.onrender.com';
 
 const GRID_SIZE = 20; // Number of cells in each row/column
 const CELL_SIZE = 20; // Size of each cell in pixels

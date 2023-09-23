@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 import {useAuthContext} from '../hooks/useAuthContext';
 import CustomForm from '../components/CustomForm';
+import {API_URL} from '../constants/constants';
 
 const Login = () => {
 	const navigate = useNavigate();
@@ -28,7 +29,7 @@ const Login = () => {
 		setIsLoading(true);
 		event.preventDefault();
 		try {
-			const response = await fetch('http://localhost:8080/api/v1/user/login', {
+			const response = await fetch(`${API_URL}/api/v1/user/login`, {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
