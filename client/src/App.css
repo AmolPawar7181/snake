@@ -1,0 +1,156 @@
+/* body {
+	overflow: hidden;
+} */
+
+.container {
+	width: 100vh;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	/* overflow: hidden; */
+}
+
+.container .game {
+	/* width: 50%;
+	height: 50%;
+	border: 1px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center; */
+	overflow: hidden;
+	position: relative;
+}
+
+.container .game .board {
+	display: grid;
+	grid-template-columns: repeat(
+		20,
+		20px
+	); /* Replace 20 with your actual GRID_SIZE value */
+	grid-template-rows: repeat(
+		20,
+		20px
+	); /* Replace 20 with your actual GRID_SIZE value */
+	width: 400px; /* Replace 400 with the result of GRID_SIZE * CELL_SIZE */
+	height: 400px; /* Replace 400 with the result of GRID_SIZE * CELL_SIZE */
+	margin: 0 auto;
+	position: relative;
+	/* border: 2px solid #333; */
+}
+
+.container .game.ended .board div {
+	background-color: gray !important;
+}
+.container .game-starter,
+.container .game-restarter {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	margin-top: 50%;
+	/* margin-left: 50%; */
+	transform: translate(-50%, -50%);
+	width: 400px;
+	height: 400px;
+	background: lightblue;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container .game-restarter {
+	background: rgba(0, 0, 0, 0.1);
+}
+
+.container .game-starter .starter,
+.container .game-restarter .starter,
+.container .game-starter .timer {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	width: auto;
+	flex-direction: column;
+}
+.container .score {
+	font-size: 40px;
+	font-weight: bold;
+	width: 100%;
+	max-width: 400px;
+}
+
+.form-wrapper {
+	background-color: #f0f0f0;
+	border-radius: 8px;
+	padding: 20px;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+	width: 300px;
+}
+
+.form-wrapper h2 {
+	margin-bottom: 15px;
+}
+
+.form-wrapper form {
+	display: flex;
+	flex-direction: column;
+}
+
+.form-wrapper form div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.form-wrapper label {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.form-wrapper input {
+	padding: 8px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.form-wrapper button {
+	padding: 10px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.form-wrapper button:hover {
+	background-color: #0056b3;
+}
+
+.leaderboard-container table {
+	background-color: #f1f1f1;
+	position: absolute;
+}
+.leaderboard-container table thead th,
+.leaderboard-container table tbody td {
+	padding: 15px;
+	border: 1px solid white;
+}
+.header-container {
+	display: flex;
+	width: 100%;
+	justify-content: flex-end;
+}
+.header-container .logout-btn {
+	background: bisque;
+	padding: 10px;
+	border-radius: 5px;
+	margin-right: 50px;
+	cursor: pointer;
+}
