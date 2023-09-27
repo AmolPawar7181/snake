@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import Home from '../Home';
+import Home from '../pages/Home';
 import {
 	render,
 	fireEvent,

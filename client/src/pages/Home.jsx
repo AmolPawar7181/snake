@@ -1,10 +1,10 @@
 import {useEffect, useState} from 'react';
 
-import Snake from './components/Snake';
-import Food from './components/Food';
-import LeaderBoard from './components/LeaderBoard';
-import Header from './components/Header';
-import './App.css';
+import Snake from '../components/Snake';
+import Food from '../components/Food';
+import LeaderBoard from '../components/LeaderBoard';
+import Header from '../components/Header';
+import '../App.css';
 import {
 	API_URL,
 	GRID_SIZE,
@@ -12,7 +12,7 @@ import {
 	initialSnakeState,
 	initialSnakeSpeed,
 	gameStates,
-} from './constants/constants';
+} from '../constants/constants';
 
 const Home = () => {
 	const [snake, setSnake] = useState([...initialSnakeState]);
@@ -264,7 +264,7 @@ const Home = () => {
 	};
 
 	return (
-		<div className='min-h-screen bg-gradient-to-r from-blue-400 to-purple-600 flex'>
+		<div className='max-sm:flex-col min-h-screen bg-gradient-to-r from-blue-400 to-purple-600 flex'>
 			{/* Header */}
 			<Header />
 
@@ -274,7 +274,7 @@ const Home = () => {
 			</div>
 
 			{/* Game board */}
-			<div className='container mx-auto mt-4'>
+			<div className='max-sm:justify-start container mx-auto mt-4'>
 				<div
 					className={`game ${
 						gameState === gameStates.over
