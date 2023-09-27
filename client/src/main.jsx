@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom/client';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 
 import {AuthContextProvider} from './context/AuthContext';
-//import Login from './pages/Login';
-//import Register from './pages/Register';
+import Loading from './components/Loading';
 import './index.css';
 
 const App = lazy(() => import('./App'));
@@ -15,7 +14,7 @@ const router = createBrowserRouter([
 	{
 		path: '/',
 		element: (
-			<Suspense fallback={'Loading...'}>
+			<Suspense fallback={<Loading />}>
 				<App />
 			</Suspense>
 		),
@@ -23,7 +22,7 @@ const router = createBrowserRouter([
 	{
 		path: '/login',
 		element: (
-			<Suspense fallback={'Loading...'}>
+			<Suspense fallback={<Loading />}>
 				<Login />
 			</Suspense>
 		),
@@ -31,7 +30,7 @@ const router = createBrowserRouter([
 	{
 		path: '/register',
 		element: (
-			<Suspense fallback={'Loading...'}>
+			<Suspense fallback={<Loading />}>
 				<Register />
 			</Suspense>
 		),
